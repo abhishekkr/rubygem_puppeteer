@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'puppeteer'
+
+case ARGV[0]
+when 'module'
+  Puppeteer.module ARGV[1], (ARGV[2] || Dir.pwd)
+else
+  puts "Unhandled Action"
+end
