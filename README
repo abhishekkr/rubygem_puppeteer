@@ -1,6 +1,7 @@
 # Puppeteer
 
-TODO: Write a gem description
+Puppeteer is there to ease out Puppet-izing the infrastructure.
+Automate the automation development.
 
 ## Installation
 
@@ -18,7 +19,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Currently it just allows creating Puppet Module with full directory structure and creates skeleton *pp file.
+Example:
+$ puppeteer module myapp
+$ puppeteer module myapp::config
+$ puppeteer module myapp::config::params
+~~~ just to quickly check what's all available
+$ puppeteer
+
 
 ## Contributing
 
