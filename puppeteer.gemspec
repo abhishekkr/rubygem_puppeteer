@@ -1,17 +1,19 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/puppeteer/version', __FILE__)
+$:.push File.expand_path('../lib', __FILE__)
+require 'puppeteer/version'
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["AbhishekKr"]
-  gem.email         = ["abhikumar163@gmail.com"]
-  gem.description   = %q{Puppeteer is there to ease out Puppet-izing the infrastructure.}
-  gem.summary       = %q{Puppeteer has been started to: ease [Puppet Configuration], [CRUD of puppet-modules-parts], [...] ~~~~~ https://raw.github.com/abhishekkr/rubygem_puppeteer/master/README}
-  gem.homepage      = "https://github.com/abhishekkr/rubygem_puppeteer"
-
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "puppeteer"
-  gem.require_paths = ["lib"]
   gem.version       = Puppeteer::VERSION
+  gem.authors       = ["abhishekkr"]
+  gem.email         = ["abhikumar163@gmail.com"]
+  gem.homepage      = "https://github.com/abhishekkr/rubygem_puppeteer"
+  gem.summary       = %q{Puppeteer has been started to: ease [Puppet Configuration], [CRUD of puppet-modules-parts], [...] ~~~~~ https://raw.github.com/abhishekkr/rubygem_puppeteer/master/README}
+  gem.description   = %q{Puppeteer is there to ease out Puppet-izing the infrastructure. Automate the automation development.}
+
+  gem.files         = `git ls-files`.split("\n")
+  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  gem.require_paths = ["lib"]
+
+  gem.executables   = %w( puppeteer )
 end
